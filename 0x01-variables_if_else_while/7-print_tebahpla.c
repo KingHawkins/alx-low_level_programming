@@ -12,7 +12,7 @@ int main(void)
 	char ch[27] = {"abcdefghijklmnopqrstuvwxyz\n"};
 	int i;
 
-	for (i = 26; i == 0; i--)
+	for (i = 27; i == 0; i--)
 	{
 		putchar(ch[i]);
 	}
