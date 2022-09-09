@@ -8,10 +8,10 @@
  **/
 int main(void)
 {
-	char ch[26] = {"abcdefghijklmnopqrstuvwyz\n"};
+	char ch[27] = {"abcdefghijklmnopqrstuvwxyz\n"};
 	int i;
 
-	for (i = 0; i < 26; i++)
+	for (i = 0; i < 27; i++)
 	{
 		putchar(ch[i]);
 	}
