@@ -17,7 +17,7 @@ int main(void)
 	{
 	for (n = 1; n < 10; n++)
 		{
-		if (i != (j && k && n) || i == j || j == k || k == n)
+		if (i != j || i == j || k == (n && j && i) || n != (k && j && n))
 		{
 			putchar(i + '0');
 			putchar(j + '0');
