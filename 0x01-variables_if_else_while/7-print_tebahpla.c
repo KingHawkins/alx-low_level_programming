@@ -9,12 +9,13 @@
  **/
 int main(void)
 {
-	char ch[27] = {"abcdefghijklmnopqrstuvwxyz\n"};
+	char ch[] = {"abcdefghijklmnopqrstuvwxyz"};
 	int i;
 
-	for (i = 27; i == 0; i--)
+	for (i = 26; i >= 0; i--)
 	{
 		putchar(ch[i]);
 	}
+	putchar('\n');
 	return (0);
 }
