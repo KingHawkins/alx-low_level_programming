@@ -11,7 +11,7 @@ int main(void)
 	char ch[27] = {"ABCDFGHIJKLMNOPRSTUVWXYZ\n"};
 	int i;
 
-	for (i = 0; i < 26; i++)
+	for (i = 0; i < 27; i++)
 	{
 		ch[i] = tolower(ch[i]);
 		putchar(ch[i]);
