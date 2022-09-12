@@ -14,21 +14,21 @@ int main(void)
 		{
 			for (k = 0; k < 10; k++)
 			{
-				if (i != 0 || j != 0 || k != 0)
+				if (k > j && j > i)
 				{
 					putchar(i + '0');
 					putchar(j + '0');
 					putchar(k + '0');
-					if (i != 1 || j != 2 || k != 0)
+					if (i != 7 || j != 8 || k != 9)
 					{
 						putchar(',');
 						putchar(' ');
-						break;
 					}
 				}
 			}
 		}
 	}
+
 	putchar('\n');
 	return (0);
 }
