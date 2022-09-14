@@ -6,18 +6,19 @@
  */
 int main(void)
 {
-	int a = 1, b = 2, c, i, number = 98;
+	int counter = 2;
+	long unsigned int a = 1;
+	long unsigned int b = a + 1;
+	long unsigned int c = a + b;
 
-	for (i = 3; i < number; ++i)
+	while (counter < 98)
 	{
 		c = a + b;
-		if (i != 97)
+		printf("%lu", a);
+		counter++;
+		if (counter != 98)
 		{
-			printf("%d, ", a);
-		}
-		if (i == 97)
-		{
-			printf("%d", a);
+			printf(", ");
 		}
 		a = b;
 		b = c;
