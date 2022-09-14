@@ -12,11 +12,8 @@
 int add(int a, int b);
 int main(void)
 {
-	int n;
-
-	add(89, 9);
-	n = add(89, 9);
-	printf("%d\n", n);
+	add();
+	printf("%d\n", add());
 	return (0);
 }
 int add(int a, int b)
