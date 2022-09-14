@@ -1,4 +1,3 @@
-#include<stdio.h>
 #include "main.h"
 /**
  * main - prints a string folloed by a new line.
@@ -7,7 +6,6 @@
  **/
 int main(void)
 {
-	_putchar("_putchar");
-	_putchar('\n');
+	write(2,"_putchar\n", 8);
 	return (0);
 }
