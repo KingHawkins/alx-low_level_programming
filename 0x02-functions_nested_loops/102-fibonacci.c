@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include"fibonacci.c"
 /**
  * main - entry point.
  * Description: Works to calculate fibonacci series.
@@ -6,21 +7,23 @@
  */
 int main(void)
 {
-	int a = 1, b = 2, c, i, number = 50;
+	int counter = 2;
+	long int a = 1;
+	long int b = a + 1;
+	long int c = a + b;
 
-	for (i = 3; i < number; ++i)
+	printf("%ld, %ld, ", a, b);
+	while (counter < 50)
 	{
-		c = a + b;
-		if (i != 49)
+		printf("%ld", c);
+		if (counter != 49)
 		{
-			printf("%d, ", a);
+			printf(", ");
 		}
-		if (i == 49)
-		{
-			printf("%d", a);
-		}
+		counter++;
 		a = b;
 		b = c;
+		c = a + b;
 	}
 	printf("\n");
 	return (0);
