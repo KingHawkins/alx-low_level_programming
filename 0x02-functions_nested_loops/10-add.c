@@ -12,8 +12,8 @@
 int add(int a, int b);
 int main(void)
 {
-	add();
-	printf("%d\n", add());
+	add(a, b);
+	printf("%d\n", add(a, b));
 	return (0);
 }
 int add(int a, int b)
