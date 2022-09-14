@@ -14,5 +14,9 @@ void print_alphabet(void)
 		ch[i] = tolower(ch[i]);
 		putchar(ch[i]);
 	}
+	putchar('\n');
 }
-
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
+}
