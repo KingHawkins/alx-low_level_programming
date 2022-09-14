@@ -9,19 +9,11 @@
  * Return: 0 if success else 1.
  *
  */
-int add(int a, int b);
-int main(void)
-{
-	int c, d;
-
-	add(c, d);
-	printf("%d\n", add(c, d));
-	return (0);
-}
 int add(int a, int b)
 {
 	int c;
 
 	c = (a + b);
+	printf("%d", c);
 	return (c);
 }
