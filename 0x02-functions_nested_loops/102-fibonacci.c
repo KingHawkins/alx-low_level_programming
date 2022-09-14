@@ -1,5 +1,4 @@
 #include<stdio.h>
-#include"_putchar.c"
 /**
  * main - entry point.
  * Description: Works to calculate fibonacci series.
