@@ -1,5 +1,4 @@
 #include<stdio.h>
-#include"fibonacci.c"
 /**
  * main - entry point.
  * Description: Works to calculate fibonacci series.
