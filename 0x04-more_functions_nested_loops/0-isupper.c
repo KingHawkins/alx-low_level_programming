@@ -1,5 +1,6 @@
 #include "main.h"
 #include<stdbool.h>
+#include<ctype.h>
 
 /**
  * _isupper - checks if c is uppercase
