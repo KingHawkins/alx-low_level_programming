@@ -1,5 +1,4 @@
 #include"main.h"
-#include"_putchar.c"
 /**
  * print_alphabet - imlpementation for the code.
  *
@@ -11,9 +10,9 @@ void print_alphabet(void)
 {
 	char ch;
 
-	for (ch = 'a'; ch >= 'z'; ch++)
+	for (ch = 'a'; ch <= 'z'; ch++)
 	{
-		_putchar(ch);
+		putchar(ch);
 	}
 	putchar('\n');
 }
