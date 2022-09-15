@@ -1,15 +1,17 @@
 #include"main.h"
+
 /**
- * positive_or_negative - testing for a positive or negative value.
- * @i: parameter to be used.
- * Return: Always 0 (success)
- **/
-void positive_or_negative(int i)
+ * main - teats if integer is negative or positive.
+ * Return: 0
+ */
+
+int main(void)
 {
-	if (i < 0)
-	{
-		printf("%d is negative", i);
-	}
-	else
-		printf("%d is positive", i);
+	int i;
+
+
+	i = 98;
+	positive_or_negative(i);
+
+	return (0);
 }
