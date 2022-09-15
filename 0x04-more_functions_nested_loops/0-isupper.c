@@ -1,6 +1,4 @@
 #include "main.h"
-#include<stdbool.h>
-#include<ctype.h>
 
 /**
  * _isupper - checks if c is uppercase
@@ -11,7 +9,7 @@
  */
 int _isupper(int c)
 {
-	if (c != isdigit(c))
+	if ((c >= 'A') && (c <= 'Z'))
 	{
 		return (1);
 	}
