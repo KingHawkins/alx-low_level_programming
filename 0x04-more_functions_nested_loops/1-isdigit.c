@@ -1,6 +1,4 @@
 #include"main.h"
-#include <stdbool.h>
-#include<ctype.h>
 
 /**
  * _isdigit - checks if digit is a number.
@@ -11,7 +9,7 @@
  */
 int _isdigit(int c);
 {
-	if (isdigit(c) == true)
+	if ((c >= 0) && (c <= 9))
 	{
 		return (1);
 	}
