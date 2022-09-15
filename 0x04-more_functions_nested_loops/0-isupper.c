@@ -11,7 +11,7 @@
  */
 int _isupper(int c)
 {
-	if (isupper(c) == true)
+	if (c != isdigit(c))
 	{
 		return (1);
 	}
