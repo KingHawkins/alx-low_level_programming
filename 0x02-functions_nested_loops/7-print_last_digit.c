@@ -9,18 +9,13 @@
  **/
 int print_last_digit(int c)
 {
-	int b;
+	
+	int last = n % 10;
 
-	if (c < 0)
+	if (n < 0)
 	{
-		b =  -(c % 10);
-		_putchar(b + '0');
-		return (b);
+	last = last * -1;
 	}
-	else
-	{
-		b = (c % 10);
-		_putchar(b + '0');
-		return (0);
-	}
+	_putchar(last + '0');
+	return (last);
 }
