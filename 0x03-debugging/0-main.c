@@ -4,7 +4,7 @@
  * @i: parameter to be used.
  * Return: Always 0 (success)
  **/
-int positive_or_negative(int i)
+void positive_or_negative(int i)
 {
 	if (i < 0)
 	{
