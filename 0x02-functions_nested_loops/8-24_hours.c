@@ -14,20 +14,15 @@ void jack_bauer(void)
 		{
 			for (j = 0; j < 6; j++)
 			{
-				for (n = 0; n < 10; n++)
+				for (n = 0; n < 10; ++n)
 				{
 					if (i != 2 && k != 3 && j != 6 && n != 0)
 					{
-						_putchar(i + '0');
-						_putchar(k + '0');
-						_putchar(':');
-						_putchar(j + '0');
-						_putchar(n + '0');
-						_putchar('\n');
+						printf("%d%d:%d%d", i, k, j, n);
+						printf("\n");
 					}
 				}
 			}
 		}
-			
 	}
 }
