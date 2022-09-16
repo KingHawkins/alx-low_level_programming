@@ -15,7 +15,7 @@ void more_numbers(void)
 		for (j = 0; j < 15; j++)
 		{
 			_putchar(i + '0');
-			if (j >= 'A' && j <= 'E')
+			if (j >= A && j <= E)
 			{
 				_putchar(j);
 			}
