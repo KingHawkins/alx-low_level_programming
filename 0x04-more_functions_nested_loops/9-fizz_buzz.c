@@ -20,6 +20,10 @@ int main(void)
 			{
 				printf("Buzz");
 			}
+			if (i % 5 == 0 && i % 3 == 0)
+			{
+				printf("FizzBuzz");
+			}
 		}
 		else
 		{
