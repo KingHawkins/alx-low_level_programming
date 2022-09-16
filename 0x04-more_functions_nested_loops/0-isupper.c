@@ -1,5 +1,6 @@
-#include"main.h"
+#include "main.h"
 #include <stdio.h>
+#include <ctype.h>
 /**
  * _isupper - is prototype
  * @c: parameter
@@ -9,7 +10,7 @@
  */
 int _isupper(int c)
 {
-	if (c >= 'A' && c <= 'Z')
+	if (isupper(c))
 	{
 		return (1);
 	}
