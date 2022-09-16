@@ -7,9 +7,9 @@
  * Description: checks if a c is uppercase
  * Return: 1 if success
  */
-int _isdigit(int c)
+int _isupper(int c)
 {
-	if (isdigit(c))
+	if (isupper(c))
 	{
 		return (1);
 	}
