@@ -1,5 +1,6 @@
 #include "main.h"
 #include <string.h>
+#include <math.h>
 /**
  * puts_half - prototype
  * @str: parameter
@@ -7,9 +8,9 @@
  */
 void puts_half(char *str)
 {
-	double i;
+	int i;
 
-	for (i = (strlen(str) - 1) / 2; i >= strlen(str) - 1; i++)
+	for (i = floor((strlen(str) - 1) / 2); i >= strlen(str) - 1; i++)
 	{
 		_putchar(str[i]);
 	}
