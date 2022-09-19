@@ -10,7 +10,7 @@ int main(void)
 {
 	unsigned long int password;
 
-	srand(time(0));
+	srand(time(NULL));
 	password = rand() - RAND_MAX / 2;
 	printf("%lu\n", password);
 	return (0);
