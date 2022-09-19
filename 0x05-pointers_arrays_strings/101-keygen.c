@@ -12,6 +12,6 @@ int main(void)
 
 	srand(time(0));
 	password = rand() - RAND_MAX / 2;
-	printf("%lu", password);
+	printf("%lu\n", password);
 	return (0);
 }	
