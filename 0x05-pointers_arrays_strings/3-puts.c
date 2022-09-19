@@ -8,6 +8,10 @@ void _puts(char *str)
 {
 	while (*str)
 	{
+		if (*str == ' ')
+		{
+			_putchar(' ');
+		}
 		_putchar(*str++);
 	}
 }
