@@ -8,7 +8,7 @@
  */
 int _atoi(char *s)
 {
-	signed int i;
+	double i;
 
 	i = atoi(s);
 	return (i);
