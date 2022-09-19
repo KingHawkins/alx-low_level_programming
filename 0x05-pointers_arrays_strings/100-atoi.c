@@ -8,7 +8,7 @@
  */
 int _atoi(char *s)
 {
-	long long int i;
+	unsigned int i;
 
 	i = atoi(s);
 	return (i);
