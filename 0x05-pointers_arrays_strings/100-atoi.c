@@ -8,5 +8,8 @@
  */
 int _atoi(char *s)
 {
-	return (atoi(s));
+	float i;
+
+	i = atoi(s);
+	return (i);
 }
