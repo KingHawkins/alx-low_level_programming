@@ -9,6 +9,9 @@ void puts2(char *str)
 {
 	while (*str)
 	{
-		_putchar(*str++);
+		if ((strlen(str) - 1) % 2 == 0)
+		{
+			_putchar(*str);
+		}
 	}
 }
