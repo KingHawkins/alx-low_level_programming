@@ -7,8 +7,6 @@
  */
 void rev_string(char *s)
 {
-	int i;
-
 	while (*s)
 	{
 		_putchar(*s--);
