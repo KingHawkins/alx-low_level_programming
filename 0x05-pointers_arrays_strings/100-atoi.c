@@ -8,7 +8,7 @@
  */
 int _atoi(char *s)
 {
-	float i;
+	long long int i;
 
 	i = atoi(s);
 	return (i);
