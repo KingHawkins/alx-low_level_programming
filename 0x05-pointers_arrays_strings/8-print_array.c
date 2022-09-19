@@ -1,4 +1,5 @@
 #include "main.h"
+#include<stddef.h>
 /**
  * print_array - protottype
  * @a: pointer to n.
@@ -7,8 +8,8 @@
  */
 void print_array(int *a, int n)
 {
-	for (n[a] = 0; n[a] != NULL; *a++)
+	for (a[n] = 0; a[n] != NULL; n++)
 	{
-		_putchar(n[a]);
+		_putchar(a[n]);
 	}
 }
