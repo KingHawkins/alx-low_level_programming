@@ -7,7 +7,9 @@
  */
 void rev_string(char *s)
 {
-	while (s > '\0')
+	int i;
+
+	while (s[i] = strlen(s) - 1)
 	{
 		_putchar(*s--);
 
