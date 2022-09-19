@@ -1,5 +1,5 @@
 #include "main.h"
-#include<stddef.h>
+#include<stdio.h>
 /**
  * print_array - protottype
  * @a: pointer to n.
@@ -12,6 +12,6 @@ void print_array(int *a, int n)
 
 	for (i = 0; i < n; i++)
 	{
-		printf("%ld", a[i]);
+		printf("%d", a[i]);
 	}
 }
