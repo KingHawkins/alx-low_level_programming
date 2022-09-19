@@ -8,8 +8,10 @@
  */
 int _atoi(char *s)
 {
-	double i;
+	void *p;
+	signed long int = i
 
-	i = atoi(s);
-	return (i);
+	*p = i;
+	*p = atoi(s);
+	return (*p);
 }
