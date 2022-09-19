@@ -8,8 +8,10 @@
  */
 void print_array(int *a, int n)
 {
-	for (a[n] = 0; a[n] != NULL; n++)
+	int i;
+
+	for (i = 0; i < n; n++)
 	{
-		_putchar(a[n]);
+		_putchar(*a[i]);
 	}
 }
