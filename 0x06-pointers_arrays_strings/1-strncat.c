@@ -10,11 +10,6 @@
  */
 char *_strncat(char *dest, char *src, int n)
 {
-	int i;
-
-	for (i = 0; i < n; i++)
-	{
-		strncat(dest, src, i);
-	}
+	strncat(dest, src, n);
 	return (dest);
 }
