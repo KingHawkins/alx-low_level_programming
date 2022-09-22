@@ -21,10 +21,10 @@ int _strcmp(char *s1, char *s2)
 		{
 			a = -15;
 		}
-		else
-		{
-			a = 0;
-		}
+	}
+	else if (!(strcmp(s1, s2)))
+	{
+		a = 0;
 	}
 	return (a);
 }
