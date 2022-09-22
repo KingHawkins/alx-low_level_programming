@@ -8,10 +8,10 @@
  */
 void reverse_array(int *a, int n)
 {
-	int i;
+	long int i;
 
 	for (i = (n - 1); i > -1; i--)
 	{
-		printf("%d", a[i]);
+		printf("%ld", a[i]);
 	}
 }
