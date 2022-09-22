@@ -33,16 +33,12 @@ void print_number(int n)
 		_putchar(((n % 1000) % 100) / 10 + '0');
 		_putchar(((n % 1000) % 100) % 10 + '0');
 	}
-	if (n < 0 && n > -10)
+	if (n < 0)
 	{
 		_putchar('-');
-		_putchar(n + '0');
-	}
-	if (n > -100 && n < -9)
-	{
-		_putchar('-');
-		_putchar(n / 10 + '0');
-		_putchar(n % 10 + '0');
+		n += 1;
+		n *= -1;
+		n++;
 	}
 	_putchar('\n');
 }
