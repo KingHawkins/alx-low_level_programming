@@ -10,7 +10,7 @@ void reverse_array(int *a, int n)
 {
 	long int i;
 
-	for (i = ((sizeof(a) / sizeof(int)) - 1); i >= 0; i--)
+	for (i = (n - 1); i >= 0; i--)
 	{
 		printf("%d", a[i]);
 	}
