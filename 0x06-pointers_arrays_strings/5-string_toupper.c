@@ -9,5 +9,11 @@
  */
 char *string_toupper(char *s)
 {
-	return (toupper(s));
+	int i;
+
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		s[i] = toupper(s[i]);
+		_putchar(s[i]);
+	}
 }
