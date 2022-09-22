@@ -1,37 +1,20 @@
-#include "main.h"
-#include <stdio.h>
+#include "holberton.h"
 /**
- * print_number - prototype
- * @n: parameter
- * Description: prints number
+ * print_number - prints number
+ * @n:integer to convert to character
+ *
  */
 void print_number(int n)
 {
+	unsigned int abs;
+	int mult = 1;
+	unsigned int abSCount;
+	int i;
+	int c = 0;
+
 	if (n == 0)
 	{
 		_putchar('0');
-	}
-	if (n > 0 && n < 10)
-	{
-		_putchar(n + '0');
-	}
-	if (n > 9 && n < 100)
-	{
-		_putchar(n / 10 + '0');
-		_putchar(n % 10 + '0');
-	}
-	if (n > 99 && n < 1000)
-	{
-		_putchar(n / 100 + '0');
-		_putchar((n % 100) / 10 + '0');
-		_putchar((n % 100) % 10 + '0');
-	}
-	if (n > 999)
-	{
-		_putchar(n / 1000 + '0');
-		_putchar((n % 1000) / 100 + '0');
-		_putchar(((n % 1000) % 100) / 10 + '0');
-		_putchar(((n % 1000) % 100) % 10 + '0');
 	}
 	if (n < 0)
 	{
@@ -40,5 +23,21 @@ void print_number(int n)
 		n *= -1;
 		n++;
 	}
-	_putchar('\n');
+	abs = n;
+	abSCount = n;
+
+	while (abSCount > 0)
+	{
+		abSCount /= 10;
+		c++;
+	}
+	for (i = 0; i < c - 1; i++)
+		mult *= 10;
+
+	for (i = 0; i < c; i++)
+	{
+		_putchar((abs / mult) + '0');
+		abs = abs % mult;
+		mult /= 10;
+	}
 }
