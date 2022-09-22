@@ -16,11 +16,11 @@ int _strcmp(char *s1, char *s2)
 		a = 0;
 		if (s1 > s2)
 		{
-			a = 15;
+			a = -15;
 		}
 		else if (s1 < s2)
 		{
-			a = -15;
+			a = 15;
 		}
 	}
 	return (a);
