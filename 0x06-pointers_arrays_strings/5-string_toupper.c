@@ -9,5 +9,5 @@
  */
 char *string_toupper(char *s)
 {
-	return (toupper(*s));
+	return (toupper(s));
 }
