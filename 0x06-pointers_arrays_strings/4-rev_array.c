@@ -1,5 +1,5 @@
 #include "main.h"
-#include <string.h>
+#include <stdio.h>
 /**
  * reverse_array - prototype
  * @a: pointer parameter
@@ -10,8 +10,8 @@ void reverse_array(int *a, int n)
 {
 	int i;
 
-	for (i >= n; i > -1; i--)
+	for (i = (n - 1); i > -1; i--)
 	{
-		_putchar(a[i]);
+		printf("%d", a[i]);
 	}
 }
