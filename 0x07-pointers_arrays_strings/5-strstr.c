@@ -1,4 +1,4 @@
-#include "main.h"''
+#include "main.h"
 #include <string.h>
 /**
  * _strstr - prototype
@@ -11,6 +11,5 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	strstr(haystack, needle);
-	return (haystack);
+	return (strstr(haystack, needle));
 }
