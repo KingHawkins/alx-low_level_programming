@@ -1,24 +1,28 @@
 #include "main.h"
 /**
- * is_prime_number - prototype
- * @n: parameter
- * Description: prints prime numbers
- * Return: 1 success else 0
+ * helper - does it for me
+ * @i: helper int
+ * @n: integer I'm testing
+ * Return: value
+ */
+int helper(int i, int n)
+{
+	if (n % i == 0 && n != i)
+		return (0);
+	if (n % i != 0 && i < n)
+		return (helper(i + 1, n));
+	return (1);
+}
+/**
+ * is_prime_number - is prime or not
+ * @n: integer to compare
+ * Return: boolean
  */
 int is_prime_number(int n)
 {
-	int i, a;
+	int i = 2;
 
-	for (i = 2; i <= n/2; i++)
-	{
-		if (n % i != 0 && n % 5 != 0)
-		{
-			a = 1;
-		}
-		else
-		{
-			a = 0;
-		}
-	}
-	return (a);
+	if (n < 2)
+		return (0);
+	return (helper(i, n));
 }
