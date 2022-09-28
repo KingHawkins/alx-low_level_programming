@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdlib.h>
+#include <stdio.h>
 /**
  * _puts_recursion - prototype
  * @s: pointer parameter
@@ -7,5 +7,6 @@
  */
 void _puts_recursion(char *s)
 {
-	puts("s\n");
+	puts(s);
+	_putchar('\n');
 }
