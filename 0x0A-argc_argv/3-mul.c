@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 {
 	int a, res, b;
 
-	if (argc < 2)
+	if (argc != 3)
 	{
 		_putchar('E');
 		_putchar('r');
