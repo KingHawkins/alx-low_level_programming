@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "_putchar.c"
 /**
  * main - entry point
  * @argc: argument
@@ -10,16 +9,11 @@
  */
 int main(int argc, char *argv[])
 {
-	int a, res, b;
-
 	if (argc != 3)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	a = atoi(argv[1]);
-	b = atoi(argv[2]);
-	res = a * b;
-	printf("%d\n", res);
+	printf("%d\n", atoi(argv[1]) * atoi(argv[2]));
 	return (0);
 }
