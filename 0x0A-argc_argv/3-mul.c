@@ -12,8 +12,6 @@ int main(int argc, char *argv[])
 {
 	int a, res, b;
 
-
-	res = 1;
 	if (argc < 2)
 	{
 		_putchar('E');
