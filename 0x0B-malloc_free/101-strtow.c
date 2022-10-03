@@ -9,10 +9,10 @@
  */
 char **strtow(char *str)
 {
-	int i, n;
+	int i;
 
 	i = 0;
-	str = malloc(sizeof(char) * n);
+	str = malloc(sizeof(char) * 100);
 	if (str == NULL)
 	{
 		return (NULL);
