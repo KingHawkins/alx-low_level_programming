@@ -12,9 +12,10 @@ char **strtow(char *str)
 	int i;
 
 	i = 0;
-	str = malloc(sizeof(char) * 100);
+	str = malloc(sizeof(char) * 4193);
 	if (str == NULL)
 	{
+		printf("Failed\n");
 		return (NULL);
 	}
 	while (str[i] != '\0')
