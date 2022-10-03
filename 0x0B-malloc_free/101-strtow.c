@@ -9,9 +9,10 @@
  */
 char **strtow(char *str)
 {
-	int i;
+	int i, n;
 
-	str = malloc(sizeof(char) * 20);
+	i = 0;
+	str = malloc(sizeof(char) * n);
 	if (str == NULL)
 	{
 		return (NULL);
@@ -20,7 +21,7 @@ char **strtow(char *str)
 	{
 		printf("%s\n", str);
 		++i;
-		return ((char**)str);
 	}
 	free(str);
+	return ((char**)str);
 }
