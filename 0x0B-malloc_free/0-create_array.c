@@ -11,13 +11,12 @@
 char *create_array(unsigned int size, char c)
 {
 	char *str;
-	int i;
-	int j;
+	unsigned int i;
 
 	i = 0;
 	str = &c;
-	str = malloc(sizeof(char) * 20);
-	if (str == NULL || str == "")
+	str = malloc(sizeof(char) * size);
+	if (str == NULL)
 	{
 		return (NULL);
 	}
@@ -25,7 +24,7 @@ char *create_array(unsigned int size, char c)
 	{
 		printf("%c ", str[i]);
 		i++;
-		return ((char*)str);
 	}
+	return ((char*)str);
 	free(str);
 }
