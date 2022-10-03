@@ -22,8 +22,12 @@ char *create_array(unsigned int size, char c)
 	}
 	while (i < size)
 	{
-		printf("%c ", str[i]);
+		printf("0x%02x", str[i]);
 		i++;
+		if (size == 0)
+		{
+			printf("failed to allocate memory\n");
+		}
 	}
 	return ((char*)str);
 	free(str);
