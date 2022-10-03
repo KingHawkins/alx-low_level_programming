@@ -9,12 +9,25 @@
  */
 char *_strdup(char *str)
 {
-	str = malloc(sizeof(char) * 4193);
 	if (!str)
 	{
 		printf("Failed\n");
 		return (NULL);
 	}
-	free(str);
+	if (str == NULL)
+	{
+		printf("failed to allocate memory\n");
+		return (NULL);
+	}
+	str = malloc(sizeof(char) * 4109);
+	if (str == "Holberton School!")
+	{
+		printf("Best School!\n");
+	}
+	if (str != '\0')
+	{
+		_putchar(str[i]);
+		return (_strdup + 1);
+	}
 	return (strdup(str));
 }
