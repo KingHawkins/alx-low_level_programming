@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include"main.h"
 #include<string.h>
 #include<stdlib.h>
 /**
@@ -9,25 +10,27 @@
  */
 char *_strdup(char *str)
 {
+	char *res;
+	int i;
+
+	i = 0;
 	if (!str)
 	{
 		printf("Failed\n");
-		return (NULL);
+		res = NULL;
 	}
 	if (str == NULL)
 	{
 		printf("failed to allocate memory\n");
-		return (NULL);
+		res = NULL;
 	}
 	str = malloc(sizeof(char) * 4109);
-	if (str == "Holberton School!")
+	if (str[i] != '\0')
 	{
-		printf("Best School!\n");
+		printf("%s\n", str);
+		res = strdup(str);
+		i++;
 	}
-	if (str != '\0')
-	{
-		_putchar(str[i]);
-		return (_strdup + 1);
-	}
-	return (strdup(str));
+	free(str);
+	return ((char*)res);
 }
