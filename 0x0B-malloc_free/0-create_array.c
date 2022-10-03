@@ -20,15 +20,24 @@ char *create_array(unsigned int size, char c)
 	{
 		return (NULL);
 	}
+	if (size == 0)
+	{
+		printf("failed to allocate memory\n");
+	}
 	while (i < size)
 	{
+		if (i % 10)
+		{
+			printf(" ");
+		}
+		if (!(i % 10) && i)
+		{
+			printf("\n");
+		}
 		printf("0x%02x", str[i]);
 		i++;
-		if (size == 0)
-		{
-			printf("failed to allocate memory\n");
-		}
 	}
-	return ((char*)str);
+	printf("\n");
 	free(str);
+	return ((char *)str);
 }
