@@ -10,25 +10,33 @@
  */
 char **strtow(char *str)
 {
-	int i;
+	int i = 0;
 	char *ptr;
+	int n;
 
 	i = 0;
 	if (str == NULL)
 	{
-		printf("Failed\n");
+		return (NULL);
 	}
 	ptr = malloc(sizeof(char) * 4193);
 	if (ptr == NULL)
 	{
 		return (NULL);
 	}
-	while (str[i] <= '\0')
+	n = strlen(str) + 1;
+	while (i < n)
 	{
-		ptr[i] = str[i];
+		if (str[i] == ' ' || str[i] == '\0')
+		{
+			ptr[i] = '\0';
+		}
+		else
+		{
+			ptr[i] = str[i];
+		}
 		++i;
 	}
-	printf("%s", ptr);
-	free(ptr);
+	printf("%s\n", ptr);
 	return ((char **)ptr);
 }
