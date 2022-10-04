@@ -16,7 +16,7 @@ char **strtow(char *str)
 	i = 0;
 	if (str == NULL)
 	{
-		return (NULL);
+		printf("Failed\n");
 	}
 	ptr = malloc(sizeof(char) * 4193);
 	if (ptr == NULL)
@@ -28,6 +28,7 @@ char **strtow(char *str)
 		ptr[i] = str[i];
 		++i;
 	}
+	printf("%s", ptr);
 	free(ptr);
 	return ((char **)ptr);
 }
