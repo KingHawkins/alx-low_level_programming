@@ -19,7 +19,7 @@ char **strtow(char *str)
 	{
 		return (NULL);
 	}
-	ptr = malloc(5000);
+	ptr = malloc(4193);
 	if (ptr == NULL)
 	{
 		return (NULL);
@@ -28,7 +28,7 @@ char **strtow(char *str)
 	while (i < n)
 	{
 		ptr[i] = str[i];
-		printf("%s\n", ptr);
+		printf("%c\n", ptr[i]);
 		++i;
 	}
 	free(ptr);
