@@ -13,9 +13,9 @@ char **strtow(char *str)
 	char *ptr;
 
 	i = 0;
-	if (str == NULL)
+	if (str == NULL || isspace(str))
 	{
-		return (NULL);
+		return ("Failed");
 	}
 	ptr = malloc(sizeof(char) * 4193);
 	if (ptr == NULL)
