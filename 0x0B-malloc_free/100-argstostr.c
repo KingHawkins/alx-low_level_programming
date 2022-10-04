@@ -10,24 +10,34 @@
  */
 char *argstostr(int ac, char **av)
 {
-	char **ptr;
-	int i, n;
+	int i, n, r = 0, l = 0;
+	char *str;
 
-	if (av == NULL)
-	{
+	if (ac == 0 || av == NULL)
 		return (NULL);
-	}
-	ptr = malloc((sizeof(char) * ac) + 47);
-	if (ac == 0)
+
+	for (i = 0; i < ac; i++)
 	{
+		for (n = 0; av[i][n]; n++)
+			l++;
+	}
+	l += ac;
+
+	str = malloc(sizeof(char) * l + 1);
+	if (str == NULL)
 		return (NULL);
-	}
-	n = strlen((char *)av) + 1;
-	for (i = 0; i < n; ++i)
+	for (i = 0; i < ac; i++)
 	{
-		ptr[i] = av[i];
+	for (n = 0; av[i][n]; n++)
+	{
+		str[r] = av[i][n];
+		r++;
 	}
-	printf("%s\n", (char *)ptr);
-	free(ptr);
-	return ((char *)ptr);
+	if (str[r] == '\0')
+	{
+		str[r++] = '\n';
+	}
+	}
+	return (str);
+	free(str);
 }
