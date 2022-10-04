@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<string.h>
 #include<stdlib.h>
 /**
  * argstostr - prototype
@@ -9,22 +10,24 @@
  */
 char *argstostr(int ac, char **av)
 {
-	char *ptr;
-	int i;
+	char **ptr;
+	int i, n;
 
 	if (av == NULL)
 	{
 		return (NULL);
 	}
-	ptr = malloc((sizeof(char) * ac));
+	ptr = malloc((strlen((char *)av) + 1));
 	if (ac == 0)
 	{
 		return (NULL);
 	}
-	for (i = 0; i < ac; ++i)
+	n = strlen((char *)av) + 1;
+	for (i = 0; i < n; ++i)
 	{
-		printf("%s\n", av[i]);
+		ptr[i] = av[i];
 	}
+	printf("%s\n", (char *)ptr);
 	free(ptr);
 	return ((char *)ptr);
 }
