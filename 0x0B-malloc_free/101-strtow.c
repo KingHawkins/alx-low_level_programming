@@ -1,4 +1,5 @@
 #include "main.h"
+#include<ctype.h>
 #include <stdlib.h>
 #include<string.h>
 #include <stdio.h>
@@ -14,29 +15,26 @@ char **strtow(char *str)
 	char *ptr;
 
 	i = 0;
-	if (str == NULL)
+	if (str == NULL || isspace(str))
 	{
-		printf("Failed\n");
 		return (NULL);
 	}
-	if (strcmp(str, " ") == 0 || !strcmp(str, ""))
+	ptr = malloc(sizeof(char) * 4193);
+	if (ptr == NULL)
 	{
-		printf("Failed\n");
-		return (NULL);
-	}
-	ptr = malloc(strlen(str) + 1);
-	if (str == NULL)
-	{
-		printf("Failed\n");
 		return (NULL);
 	}
 	n = strlen(str) + 1;
 	while (i < n)
 	{
 		ptr[i] = str[i];
+		if (isspace(ptr[i]))
+		{
+			putchar('\n');
+		}
+		printf("%s\n", ptr);
 		++i;
 	}
-	printf("%s\n", ptr);
 	free(ptr);
-	return ((char**)ptr);
+	return ((char **)ptr);
 }
