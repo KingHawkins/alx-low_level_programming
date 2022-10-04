@@ -10,27 +10,25 @@
  */
 char *_strdup(char *str)
 {
-	char *res;
+	char *t;
 	int i;
+	int c = 0;
 
-	i = 0;
-	if (!str)
-	{
-		printf("Failed\n");
-		res = NULL;
-	}
+
 	if (str == NULL)
-	{
-		printf("failed to allocate memory\n");
-		res = NULL;
-	}
-	str = malloc(sizeof(char) * 4109);
-	if (str[i] != '\0')
-	{
-		printf("%s\n", str);
-		res = strdup(str);
-		i++;
-	}
-	free(str);
-	return ((char*)res);
+		return (NULL);
+
+	while (str[c] != '\0')
+		c++;
+
+	t = malloc(sizeof(char) * c + 1);
+
+	if (t == NULL)
+		return (NULL);
+
+	for (i = 0; i < c; i++)
+		t[i] = str[i];
+
+	return (t);
+
 }

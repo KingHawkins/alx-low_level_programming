@@ -17,7 +17,7 @@ char **strtow(char *str)
 	i = 0;
 	if (str == NULL)
 	{
-		return (NULL);
+		return (printf("Failed\n"));
 	}
 	ptr = malloc(sizeof(char) * 4193);
 	if (ptr == NULL)
@@ -29,10 +29,13 @@ char **strtow(char *str)
 	{
 		ptr[i] = str[i];
 		++i;
+		if (isspace(ptr[i])
+	
 	}
-	if (!isspace(ptr[i]))
+	if (isspace(ptr[i]))
 	{
-		printf("%s", ptr);
+		ptr[i] = '\n';
+		printf("%s\n", ptr);
 	}
 	free(ptr);
 	return ((char **)ptr);
