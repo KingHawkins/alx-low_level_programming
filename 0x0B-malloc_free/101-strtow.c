@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include<ctype.h>
 #include<string.h>
 #include <stdio.h>
 /**
@@ -15,7 +16,7 @@ char **strtow(char *str)
 	i = 0;
 	if (str == NULL || isspace(str))
 	{
-		return ("Failed");
+		return (NULL);
 	}
 	ptr = malloc(sizeof(char) * 4193);
 	if (ptr == NULL)
