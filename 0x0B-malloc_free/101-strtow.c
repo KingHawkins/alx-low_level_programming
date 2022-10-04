@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#include<string.h>
 #include <stdio.h>
 /**
  * strtow - prototype
@@ -9,20 +10,33 @@
  */
 char **strtow(char *str)
 {
-	int i;
+	int i, n;
+	char *ptr;
 
 	i = 0;
-	str = malloc(sizeof(char) * 4193);
 	if (str == NULL)
 	{
 		printf("Failed\n");
 		return (NULL);
 	}
-	while (str[i] != '\0')
+	if (strcmp(str, " ") == 0 || !strcmp(str, ""))
 	{
-		printf("%s\n", str);
+		printf("Failed\n");
+		return (NULL);
+	}
+	ptr = malloc(strlen(str) + 1);
+	if (str == NULL)
+	{
+		printf("Failed\n");
+		return (NULL);
+	}
+	n = strlen(str) + 1;
+	while (i < n)
+	{
+		ptr[i] = str[i];
 		++i;
 	}
-	free(str);
-	return ((char**)str);
+	printf("%s\n", ptr);
+	free(ptr);
+	return ((char**)ptr);
 }
