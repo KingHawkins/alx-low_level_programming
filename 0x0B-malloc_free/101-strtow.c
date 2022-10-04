@@ -1,5 +1,3 @@
-#include "main.h"
-#include<ctype.h>
 #include <stdlib.h>
 #include<string.h>
 #include <stdio.h>
@@ -11,7 +9,7 @@
  */
 char **strtow(char *str)
 {
-	int i, n;
+	int i;
 	char *ptr;
 
 	i = 0;
@@ -24,16 +22,10 @@ char **strtow(char *str)
 	{
 		return (NULL);
 	}
-	n = strlen(str) + 1;
-	while (i < n)
+	while (str[i] <= '\0')
 	{
 		ptr[i] = str[i];
 		++i;
-		if (isspace(ptr[i]))
-		{
-			ptr[i] = '\n';
-		}
-	
 	}
 	free(ptr);
 	return ((char **)ptr);
