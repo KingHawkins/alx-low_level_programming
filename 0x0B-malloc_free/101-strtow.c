@@ -28,10 +28,6 @@ char **strtow(char *str)
 	while (i < n)
 	{
 		ptr[i] = str[i];
-		if (isspace(ptr[i]))
-		{
-			putchar('\n');
-		}
 		printf("%s\n", ptr);
 		++i;
 	}
