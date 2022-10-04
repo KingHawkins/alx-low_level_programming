@@ -19,7 +19,7 @@ char **strtow(char *str)
 	{
 		return (NULL);
 	}
-	ptr = malloc(sizeof(char) * 4193);
+	ptr = malloc(strlen(str) + 1);
 	if (ptr == NULL)
 	{
 		return (NULL);
