@@ -14,7 +14,7 @@ char **strtow(char *str)
 	char *ptr;
 
 	i = 0;
-	if (str == NULL || isspace(str))
+	if (str == NULL)
 	{
 		return (NULL);
 	}
