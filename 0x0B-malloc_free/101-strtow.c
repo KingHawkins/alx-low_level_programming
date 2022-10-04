@@ -15,11 +15,11 @@ char **strtow(char *str)
 	char *ptr;
 
 	i = 0;
-	if (str == NULL || isspace(str))
+	if (str == NULL)
 	{
 		return (NULL);
 	}
-	ptr = malloc(strlen(str) + 1);
+	ptr = malloc(5000);
 	if (ptr == NULL)
 	{
 		return (NULL);
