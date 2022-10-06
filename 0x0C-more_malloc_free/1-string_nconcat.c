@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * string_noncat - prototype
+ * string_nconcat - prototype
  * @s1: par
  * @s2: par
  * @n: par
