@@ -12,19 +12,14 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *ptr, *ptr2;
-	unsigned int i, j;
+	char *ptr;
 
-	for (i = 0; i < n; i++)
-	{
-		ptr = strcat(s1, s2);
-	}
-	ptr2 = malloc(sizeof(ptr));
-	if (ptr2 == NULL)
+	ptr = malloc(sizeof(*s2) + sizeof(*s1));
+	if (ptr == NULL)
 	{
 		return (NULL);
 	}
-	ptr2 = ptr;
-	free(ptr2);
-	return ((char *)ptr2);
+	ptr = strncat(s1, s2, n);
+	free(ptr);
+	return ((char *)ptr);
 }
