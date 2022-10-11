@@ -10,5 +10,15 @@
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	scanf("%s%e%s\n", &(char *)name, &age, &(char *)owner);
+	char *new;
+
+	*new = malloc(sizeof(dog_t));
+	if (new == NULL)
+		exit (1);
+
+	new = strcpy(new->name, name);
+	new = strcpy(new->owner, owner);
+	free(new->name);
+	free(new->owner);
+	return (new_dog);
 }
