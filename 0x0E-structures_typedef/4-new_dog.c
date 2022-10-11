@@ -7,6 +7,7 @@
  * @age: par
  * @owner: par
  * Description: creates a new dog
+ * Return: struct
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
