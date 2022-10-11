@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include<stdlib.h>
 #include "dog.h"
 /**
  * new_dog - creates a new dog
@@ -44,5 +45,5 @@ dog_t *new_dog(char *name, float age, char *owner)
 		b[i] = owner[i];
 	b[i] = '\0';
 	ndog->owner = b;
-	return (ndog)
+	return (ndog);
 }
