@@ -10,5 +10,5 @@
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	scanf("%s%d%s\n", &new_dog.name, &new_dog.age, &new_dog.owner);
+	scanf("%s%e%s\n", &(char *)name, &age, &(char *)owner);
 }
