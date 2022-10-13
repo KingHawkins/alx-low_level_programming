@@ -1,4 +1,5 @@
 #include "function_pointers.h"
+#include <stdlib.h>
 #include <ctype.h>
 /**
  * int_index - prototype
