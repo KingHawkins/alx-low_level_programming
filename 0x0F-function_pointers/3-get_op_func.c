@@ -9,17 +9,24 @@
  */
 int (*get_op_func(char *s))(int, int)
 {
-	void r;
-	char s1[6] = "+-*/%";
+	op_t ops[] = {
+		{"+", op_add},
+		{"-", op_sub},
+		{"*", op_mul},
+		{"/", op_div},
+		{"%", op_mod},
+		{NULL, NULL}
+	};
+	int i;
 
-	if (s == NULL)
-		r = NULL;
+	i = 0;
+	while (ops[i].f != NULL)
+	{
+		if (*s == *(ops[i].op) && s[1] == '\0')
+			return (ops[i].f);
+		i++;
+	}
 
-	s = s1;
-	*(s + 0) ? r = (op_add(int , int)) : ;
-	*(s + 1) ? r = (op_sub(int, int)) : ;
-	*(s + 2) ? r = (op_mul(int, int)) : ;
-	*(s + 3) ? r = (op_div(int, int)) : ;
-	*(s + 4) ? r = (op_mod(int, int)) : ;
-	return (r);
+	printf("Error\n");
+	exit(99);
 }
