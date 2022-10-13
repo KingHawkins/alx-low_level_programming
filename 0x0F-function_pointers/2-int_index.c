@@ -23,9 +23,7 @@ int int_index(int *array, int size, int (*cmp)(int))
 		if (isdigit(cmp(*(array + i))))
 			index = i;
 
-		else
-			index = 0;
-
 	}
+	index = -1;
 	return (index);
 }
