@@ -1,5 +1,6 @@
-#include "function_pointers.h"
-#include "3-op_functions.c"
+#include "3-calc.h"
+#include <stdlib.h>
+#include <stdio.h>
 /**
  * get_op_func - prototype
  * @s: par
