@@ -10,7 +10,7 @@ void print_name(char *name, void (*f)(char *))
 	int i;
 
 	(*f)(name);
-	if (*f)
+	if (!*f == NULL)
 	{
 		for (i = 0; name[i] != '\0'; i++)
 		{
