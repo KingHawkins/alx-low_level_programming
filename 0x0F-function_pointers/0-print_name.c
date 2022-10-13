@@ -7,15 +7,7 @@
  */
 void print_name(char *name, void (*f)(char *))
 {
-	int i;
-
-	(*f)(name);
-	if (*f != NULL)
-	{
-		for (i = 0; name[i] != '\0'; i++)
-		{
-			_putchar(f(name));
-		}
-	}
-	_putchar('\n');
+	
+	if (name != NULL && f != NULL)
+		f(name);
 }
