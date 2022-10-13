@@ -20,11 +20,11 @@ int int_index(int *array, int size, int (*cmp)(int))
 
 	for (i = 0; i < size; i++)
 	{
-		if (isdigit(*(array + i)))
+		if (isdigit(cmp(*(array + i))))
 			index = i;
 
 		else
-			index = -1;
+			index = 0;
 
 	}
 	return (index);
