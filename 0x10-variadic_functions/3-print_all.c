@@ -9,7 +9,6 @@
  */
 void print_all(const char * const format, ...)
 {
-	char *p;
 	va_list ptr;
 	int i, n;
 
@@ -21,7 +20,7 @@ void print_all(const char * const format, ...)
 		switch (format[i])
 		{
 			case 'c':
-				printf("%c",va_arg(ptr, int));
+				printf("%c", va_arg(ptr, int));
 				va_end(ptr);
 				printf("\n");
 				break;
@@ -36,7 +35,7 @@ void print_all(const char * const format, ...)
 				printf("\n");
 				break;
 			case 's':
-				if (p == NULL)
+				if (va_arg(ptr, char *) == NULL)
 					printf("(nil)");
 
 				printf("%s", va_arg(ptr, char *));

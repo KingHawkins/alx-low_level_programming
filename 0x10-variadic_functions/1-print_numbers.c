@@ -10,7 +10,7 @@
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
-	int i;
+	unsigned int i;
 	double val;
 	va_list vl;
 
@@ -19,9 +19,9 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	{
 		val = va_arg(vl, double);
 		printf("%.2f", val);
-		if (*separator != NULL)
+		if (separator != NULL)
 		{
-			printf("%s", *separator);
+			printf("%s", separator);
 		}
 		va_end(vl);
 		printf("\n");
