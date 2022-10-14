@@ -20,15 +20,15 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		if (str != NULL)
 			printf("%s", str);
 
-		if (str == NULL || i != n - 1)
+		if (str == NULL)
 		{
 			printf("(nil)");
 		}
-		if (separator != NULL || i != n - 1)
+		if (separator != NULL && i != n - 1)
 		{
 			printf("%s", separator);
 		}
 	}
-	printf("\n");
 	va_end(ptr);
+	printf("\n");
 }
