@@ -5,6 +5,7 @@
  * malloc_checked - prototype
  * @b: par
  * Description: allocates memory using malloc
+ * Return: ptr
  */
 void *malloc_checked(unsigned int b)
 {
