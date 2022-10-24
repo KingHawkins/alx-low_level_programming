@@ -123,11 +123,6 @@ int main(void)
     new->str = NULL;
     n = print_list(head);
     printf("-> %lu elements\n", n);
-
-    free(new);
-    return (0);
-}
-julien@ubuntu:~/0x12. Singly linked lists$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 0-main.c 0-print_list.c -o a
 julien@ubuntu:~/0x12. Singly linked lists$ ./a 
 [5] Hello
 [5] World
@@ -444,13 +439,12 @@ julien@ubuntu:~/0x12. Singly linked lists$
 
 ##5.Hare and the tortoise
 <p>
-<img src="https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2020/9/de3291ccf5b255fff6ce37bfde7a13f481e7ed0c.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20221024%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20221024T104429Z&amp;X-Amz-Expires=86400&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=c212049f91842787b3f4173689867e53f26306956c45cab5bc9c11d6479e0763" alt="" loading="lazy" style="">
-</p>
-<p>
 Write a function that prints <code style="color: beige">You're beat! and yet, you must allow,\nI bore my house upon my back!\n</code> before the main function is executed</p>
 <ul>
 <li>
 You are allowed to use the <code>printf</code>function
+</li>
+</ul>
 ```bash
 julien@ubuntu:~/0x12. Singly linked lists$ cat 100-main.c
 #include <stdio.h>
@@ -483,10 +477,10 @@ You are only allowed to use the <code style="color: beige">printf</code> functio
 <li>Your program will be compiled using <code style="color: grey">nasm</code> and <code>gcc</code>
 </li>
 </ul>
-```bash
+<code>
 julien@ubuntu:~/$ nasm -f elf64 101-hello_holberton.asm && gcc -no-pie -std=gnu89 101-hello_holberton.o -o hello
 julien@ubuntu:~/$ ./hello 
 Hello, Holberton
 julien@ubuntu:~/$ 
-```
+</code>
 <strong>File:<code>101-hello_holberton.asm</code></strong>

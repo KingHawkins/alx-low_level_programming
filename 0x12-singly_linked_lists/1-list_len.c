@@ -9,12 +9,12 @@
  */
 size_t list_len(const list_t *h)
 {
-	unsigned int j = 0;
+	size_t j = 0;
 
         while (h != NULL)
         {
                 h = h->next;
-		j = j + 2;
+		j = j + 1;
         }
         return (j);
 }	
