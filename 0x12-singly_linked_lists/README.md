@@ -1,58 +1,55 @@
 # 0x12.C - Singly linked lists
 <div class= "align-items-center d-flex flex-wrap gap-3 my-2">
-  <span class = "label label-primary" style = "font-size: 14px;">C</span>
-  <span class="label label-primary" style="font-size: 14px;">Algorithm</span>
-  <span class="label label-primary" style="font-size: 14px;">Data Structure</span>
+  <span class="label" style = "font-size: 14px;, color: red;, border-radius:3px;">C</span>
+  <span class="label" style="font-size: 14px;">Algorithm</span>
+  <span class="label" style="font-size: 14px;">Data Structure</span>
 </div>
 <p>
   <img src="https://s3.amazonaws.com/intranet-projects-files/holbertonschool-low_level_programming/229/giphy-3.gif" alt loading="lazy">
 </p>
-##Resources
+<h2>Resources</h2>
 <p>
  <strong>Read or Watch</strong>
-  ":"
 </p>
 <ul>
  <li>
-  ::marker
   <a href="https:alx-intranet.hbtn.io/rltoken/joxg32-tt4lUh8Afgst8tA" title="Linked Lists" target="_blank">Linked Lists</a>
   </li>
  <li>
-  ::marker
  <a href="https://alx-intranet.hbtn.io/rltoken/epKUCIcoA6XaN1T3Vtr_9w" title="Youtube" target="_blank">Youtube</a>
  </li>
  <li>
- ::marker
  <a href="https://alx-intranet.hbtn.io/rltoken/USaZbNdfcuIFII-K2YPsKQ" title="Google" target="_blank">Google</a>
  </li>
-
-##Learning Objectives
+</ul>
+<h2>Learning Objectives</h2>
 <p>At the end of this project, you are expected to be able to explain to anyone ,<strong>without the help of Google:</strong>
 </p>
 
-##General
-
-*When and why using linked lists vs arrays
-*How to build and use linked lists
-
-##Copyright - Plagiarism
+<h2>General</h2>
+<ul>
+<li>When and why using linked lists vs arrays</li>
+<li>How to build and use linked lists</li>
+</ul>
+<h2>Copyright - Plagiarism</h2>
 <ul>
 <li>You are tasked to come up with solutions for the tasks below yourself to meet with the above learning objectives.</li>
 <li>You will not be able to meet the objectives of this or any following project by copying and pasting someone else’s work.</li>
 <li>You are not allowed to publish any content of this project.</li>
 <li>Any form of plagiarism is strictly forbidden and will result in removal from the program.</li>
 </ul>
-##Requirements
-###General
+<h2>Requirements</h2>
+<h3>General</h3>
 <ul>
 <li>Allowed editors:<code>vi, vim, emacs</code></li>
 </ul>
-###Compilation
-```bash
-gcc -Wall -Wextra -Werror -pedantic -std=gnu89 *.c
-```
-#More Info
-Please use this data structure for this project:
+<h2>Compilation</h2>
+<code>
+gcc -Wall -Wextra -Werror -pedantic -std=gnu89 
+</code>
+<h3>More Info</h3>
+Please use this data structure for this project
+
 ```bash
 /**
  * struct list_s - singly linked list
@@ -70,21 +67,22 @@ typedef struct list_s
 } list_t;
 ```
 
-#Tasks
-##0. Print list
+<h2>Tasks</h2>
+<h3>0.Print list</h3>
 <p>Write a function that prints all the elements of a <code style="color: red">list_t</code> list.
 </p>
 <ul>
 <li>Prototype:
-```bash
+<code>
 size_t print_list(const list_t *h);
-```
+</code>
 </li>
 <li>Return: Number of nodes</li>
-<li>If <code style+"color: red">str</code>is <code>NULL</code>
+<li>If <code style="color: red;">str</code>is <code>NULL</code>
 </li>
 <li>You are allowed to use <code>printf</code></li>
 </ul>
+
 ```bash
 julien@ubuntu:~/0x12. Singly linked lists$ cat 0-main.c
 #include <stdlib.h>
@@ -133,21 +131,25 @@ julien@ubuntu:~/0x12. Singly linked lists$ ./a
 -> 2 elements
 julien@ubuntu:~/0x12. Singly linked lists$ 
 ```
-###Repo:
+
+<h2>Repo:</h2>
 <ul>
 <li>Github repo: <code>alx-low_level_programming</code></li>
 <li>Directory: <code>0x12-singly_linked_lists</code></li>
 <li>File: <code>0-print_list.c</code></li>
 </ul>
 
-
-##1.List length
+<h2>1.List length</h2>
 <p>Write a function that returns the number of elements in a linked <code>list_t</code> list.</p>
 <ul>
 <li>Prototype:
-```bash
+
+```bash:
 size_t list_len(const list_t *h);
 ```
+</li>
+</ul>
+
 ```bash
 julien@ubuntu:~/0x12. Singly linked lists$ cat 1-main.c
 #include <stdlib.h>
@@ -189,25 +191,30 @@ julien@ubuntu:~/0x12. Singly linked lists$ ./b
 -> 2 elements
 julien@ubuntu:~/0x12. Singly linked lists$
 ```
-###Repo:
+
+<h3>Repo:</h3>
 <ul>
 <li>Github repo: <code>alx-low_level_programming</code></li>
 <li>Directory: <code>0x12-singly_linked_lists</code></li>
-<li>File: <code>1-list_len.c</code>
-
-##2. Add Node
+<li>File: <code>1-list_len.c</code></li>
+</ul>
+<h3>2.Add Node</h3>
 Write a function that adds a new node at the beginning of a list_t list.
 <ul>
 <li>Prototype:
+
 ```bash
 list_t *add_node(list_t **head, const char *str);
 ```
+
 </li>
+</ul>
 <ul>
 <li>Return: the address of the new element, or NULL if it failed</li>
 <li><code>str</code> needs to be duplicated</li>
 <li>you are allowed to use <code>strdup</code></li>
 </ul>
+
 ```bash
 julien@ubuntu:~/0x12. Singly linked lists$ cat 2-main.c
 #include <stdlib.h>
@@ -288,16 +295,20 @@ julien@ubuntu:~/0x12. Singly linked lists$ ./c
 [9] Alexandro
 julien@ubuntu:~/0x12. Singly linked lists$ 
 ```
-##3. Add node at the end
+
+<h3>3. Add node at the end</h3>
 Write a function that adds a new node at the end of a list_t list
 <ul>
 <li>Prototype:
+
 ```bash
 list_t *add_node_end(list_t **head, const char *str);
 ```
+
 </li>
 <li>Return: the address of the new element, or NULL if it failed</li>
 </ul>
+
 ```bash
 julien@ubuntu:~/0x12. Singly linked lists$ cat 3-main.c
 #include <stdlib.h>
@@ -378,14 +389,18 @@ julien@ubuntu:~/0x12. Singly linked lists$ ./d
 [6] Walton
 julien@ubuntu:~/0x12. Singly linked lists$ 
 ```
-##4.Free list
+
+<h3>4.Free list</h3>
 Write a function that frees a list_t list
 <ul><li>Prototype:
+
 ```bash
 void free_list(list_t *head);
 ```
+
 </li>
 </ul>
+
 ```bash
 julien@ubuntu:~/0x12. Singly linked lists$ cat 4-main.c
 #include <stdlib.h>
@@ -437,14 +452,12 @@ julien@ubuntu:~/0x12. Singly linked lists$ valgrind ./e
 julien@ubuntu:~/0x12. Singly linked lists$ 
 ```
 
-##5.Hare and the tortoise
+<h3>5.Hare and the tortoise</h3>
 <p>
 Write a function that prints <code style="color: beige">You're beat! and yet, you must allow,\nI bore my house upon my back!\n</code> before the main function is executed</p>
-<ul>
-<li>
+
 You are allowed to use the <code>printf</code>function
-</li>
-</ul>
+
 ```bash
 julien@ubuntu:~/0x12. Singly linked lists$ cat 100-main.c
 #include <stdio.h>
@@ -466,9 +479,10 @@ I bore my house upon my back!
 (A tortoise, having pretty good sense of a hare's nature, challenges one to a race.)
 julien@ubuntu:~/$
 ```
+
 <strong>File: <code style="color: beige">100-first.c</code></strong>
 
-##Real programmers can write assembly code in any language
+<h3>Real programmers can write assembly code in any language</h3>
 Write a 64-bit program in assembly that prints <code style="color: beige">Hello, Holberton</code>, followed by a new line.
 <ul>
 <li>
@@ -477,10 +491,12 @@ You are only allowed to use the <code style="color: beige">printf</code> functio
 <li>Your program will be compiled using <code style="color: grey">nasm</code> and <code>gcc</code>
 </li>
 </ul>
-<code>
+
+```bash
 julien@ubuntu:~/$ nasm -f elf64 101-hello_holberton.asm && gcc -no-pie -std=gnu89 101-hello_holberton.o -o hello
 julien@ubuntu:~/$ ./hello 
 Hello, Holberton
 julien@ubuntu:~/$ 
-</code>
+```
+
 <strong>File:<code>101-hello_holberton.asm</code></strong>
