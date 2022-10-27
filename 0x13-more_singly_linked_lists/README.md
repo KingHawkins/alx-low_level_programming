@@ -1,13 +1,13 @@
-#0x13. C - More singly linked lists
+<h1>0x13. C - More singly linked lists</h1>
 <code>C</code> <code>Algorithm</code> <code>Data Structure</code>
-##Resources
+<h2>Resources</h2>
 <strong>Read or Watch</strong>
 <ul>
 <li><a href="https://alx-intranet.hbtn.io/rltoken/2-7-eVuWcPutbXf6YZZgiA" title="Google" target="_blank">Google</a></li>
 <li><a href="https://alx-intranet.hbtn.io/rltoken/wVWwl86ufLMsXeAigpxllg" title="Youtube" target="_blank">Youtube</a></li>
 </ul>
-##Requirements
-###General
+<h2>Requirements</h2>
+<h3>General</h3>
 <ul>
 <li>Allowed editors: <code>vi, vim, emacs</code></li>
 <li>All your files will be compiled on Ubuntu 20.04 LTS using gcc, using the options <code>-Wall -Werror -Wextra -pedantic -std=gnu89</code></li>
@@ -20,7 +20,7 @@
 <li>You are allowed to use <code>putchar</code></li>
 <li>The prototypes of all your functions and the prototype of the function putchar should be included in your header file called <code>lists.h</code></li>
 </ul>
-##More Info
+<h2>More Info</h2>
 Please use this data structure
 
 
@@ -41,7 +41,7 @@ typedef struct listint_s
 ```
 
 
-##Files
+<h2>Files</h2>
 <ul>
 <li><code>0-print_listint.c</code> -  prints all the elements of a <code>listint_t</code> list.</li>
 <li><code>1-listint_len.c</code> - returns the number of elements in a linked <code>listint_t</code> list</li>
