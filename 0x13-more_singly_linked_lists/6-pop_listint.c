@@ -8,9 +8,8 @@
  */
 int pop_listint(listint_t **head)
 {
-	head = malloc(sizeof(listint_t));
-	if (head != NULL)
-		free(head);
+	if (listint_t)
+		pop(head);
 
 	else
 		return (0);
