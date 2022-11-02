@@ -12,6 +12,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	char buffer[2049];
 	int fd;
+	ssize_t helper, helper1;
 
 	if (filename == NULL)
 		return (0);
@@ -21,10 +22,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (fd == -1)
 		return (0);
 
-	read(fd, buffer, letters);
+	helper = read(fd, buffer, letters);
 	buffer[letters + 1] = '\0';
 
-
+	helper1 = write(STDOUT_FILENO, buffer, helper);
 	close(fd);
-	return (0);
+	return (helper1);
 }
