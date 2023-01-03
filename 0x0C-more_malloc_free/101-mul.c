@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <string.h>
 #include <stdio.h>
 /**
  * main - prototype
@@ -9,7 +10,7 @@
  */
 int main(int argc, char *argv[])
 {
-	long int ptr;
+	long double ptr;
 
 	if (argc < 2)
 	{
@@ -17,8 +18,8 @@ int main(int argc, char *argv[])
 	}
 	if (argc > 1 && argc < 4)
 	{
-		ptr = (atol(argv[1]) * atol(argv[2]));
-		printf("%ld\n", ptr);
+		ptr = (strtod((argv[1]), sizeof(argv[1])) * strtod((argv[2]), sizeof(argv[2]));
+		printf("%Lf\n", ptr);
 	}
 	if (argc > 3)
 	{
